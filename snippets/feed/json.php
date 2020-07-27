@@ -5,7 +5,7 @@
             'id'             => $item->url(),
             'url'            => $item->{$urlfield}(),
             'title'          => $item->{$titlefield}()->value(),
-            'intro_html'     => $item->{$summaryfield}()->kirbytext()->value(),
+            'summary_html'     => $item->{$summaryfield}()->kirbytext()->value(),
             'content_html'   => $item->{$textfield}()->kirbytext()->value(),
             'date_published' => date('c', $item->{$datefield}()->toTimestamp()),
             'date_modified'  => $item->modified('Y-m-d\TH:i:sP', 'date'),
