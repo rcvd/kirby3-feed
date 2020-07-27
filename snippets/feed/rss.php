@@ -15,7 +15,7 @@ echo '<?xml version="1.0" encoding="utf-8"?>';
       <link><?= \Kirby\Toolkit\Xml::encode($item->{$urlfield}()) ?></link>
       <guid><?= \Kirby\Toolkit\Xml::encode($item->url()) ?></guid>
       <pubDate><?= $datefield === 'modified' ? $item->modified('r', 'date') : date('r', $item->{$datefield}()->toTimestamp()) ?></pubDate>
-      <description><![CDATA[<?= $item->{$summaryfield}()->kirbytext() ?><?= $item->{$textfield}()->kirbytext() ?>]]></description>
+      <description><![CDATA[<?= $item->summary()->kirbytext() ?><?= $item->{$textfield}()->kirbytext() ?>]]></description>
     </item>
     <?php endforeach; ?>
   </channel>
